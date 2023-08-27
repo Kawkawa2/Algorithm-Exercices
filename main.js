@@ -95,3 +95,33 @@ const InsertionSort = () => {
 };
 // calling the sort method:
 // InsertionSort();
+
+// --------------------------------Linear search:--------------------------------------------
+
+// creating the  Bubble sort algorithm
+
+const linearSearch = () => {
+  alert("this is the linear search");
+
+  // calling the user enteries method:
+  userEnteries();
+  // ask the user to enter the target element
+  const targetElem = prompt("enter the target element please:");
+  if (targetElem === null || targetElem === "") {
+    alert("the target element entered not valid");
+  }
+  let targetElemIndex;
+  for (let i = 0; i < itemsList.length; i++) {
+    if (parseInt(targetElem) === parseInt(itemsList[i])) {
+      targetElemIndex = i;
+      break;
+    }
+  }
+  if (targetElemIndex) {
+    console.log("the target element's index is: " + targetElemIndex);
+  } else {
+    console.log("the target element entered not found!");
+  }
+};
+// calling the search method:
+linearSearch();
