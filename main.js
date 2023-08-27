@@ -74,3 +74,24 @@ const BubbleSort = () => {
 };
 // calling the sort method:
 // BubbleSort();
+
+// --------------------------------Insertion sort:--------------------------------------------
+
+// creating the  Bubble sort algorithm
+
+const InsertionSort = () => {
+  alert("this is the insertion sort");
+
+  // calling the user enteries method:
+  userEnteries();
+  for (i = 1; i < n; i++) {
+    let j = i;
+    while (j > 0 && parseInt(itemsList[j]) < parseInt(itemsList[j - 1])) {
+      swap(parseInt(j), parseInt(j - 1));
+      j--;
+    }
+  }
+  console.log(itemsList);
+};
+// calling the sort method:
+// InsertionSort();
