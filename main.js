@@ -77,7 +77,7 @@ const BubbleSort = () => {
 
 // --------------------------------Insertion sort:--------------------------------------------
 
-// creating the  Bubble sort algorithm
+// creating the  insertion sort algorithm
 
 const InsertionSort = () => {
   alert("this is the insertion sort");
@@ -98,7 +98,7 @@ const InsertionSort = () => {
 
 // --------------------------------Linear search:--------------------------------------------
 
-// creating the  Bubble sort algorithm
+// creating the  linear search  algorithm
 
 const linearSearch = () => {
   alert("this is the linear search");
@@ -124,4 +124,41 @@ const linearSearch = () => {
   }
 };
 // calling the search method:
-linearSearch();
+// linearSearch();
+
+// --------------------------------matrix:--------------------------------------------
+
+// creating the  matrix  algorithm
+
+const matrix = () => {
+  alert("this is the matrix that you will fill");
+
+  //asking for rows and cols numbers:
+  var Rows = prompt("enter number of rows please:");
+  var Cols = prompt("enter number of columns please:");
+  let matrix = [];
+  if (Rows > 0 && Cols > 0) {
+    //creating a table with rows and cols:
+    for (let i = 0; i < Rows; i++) {
+      let list = [];
+      for (let j = 0; j < Cols; j++) {
+        let item = prompt(`enter number at row ${i + 1} column ${j + 1}`);
+        list.push(item);
+      }
+      matrix.push(list);
+    }
+  }
+  let counter = 0;
+  if (matrix.length !== 0) {
+    for (let i = 0; i < Rows; i++) {
+      for (let j = 0; j < Cols; j++) {
+        if (parseInt(matrix[i][j]) === parseInt(0)) {
+          counter++;
+        }
+      }
+    }
+  }
+  console.log(`the matrix has ${counter} occurence of zero`);
+};
+// calling the matrix method:
+matrix();
